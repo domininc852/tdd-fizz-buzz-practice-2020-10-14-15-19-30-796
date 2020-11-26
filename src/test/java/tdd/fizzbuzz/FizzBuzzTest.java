@@ -45,5 +45,15 @@ public class FizzBuzzTest {
         //then
         assertEquals("Whizz",actualOrder);
     }
+    @Test
+    public void should_return_FizzBuzz_when_count_off_given_order_number_multiple_of_3_and_5(){
+        //given
+        int order=15;
+        FizzBuzz fizzbuzz=new FizzBuzz();
+        //when
+        String actualOrder=fizzbuzz.countOff(order);
+        //then
+        assertEquals("FizzBuzz",actualOrder);
+    }
 
 }
