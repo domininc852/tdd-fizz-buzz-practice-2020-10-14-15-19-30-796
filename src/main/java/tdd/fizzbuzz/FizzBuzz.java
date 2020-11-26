@@ -9,13 +9,16 @@ public class FizzBuzz {
     private final int MODULO_7 =7;
     public String countOff(int order) {
         String countOff="";
-        if (order% MODULO_3 ==0){
+        boolean isMultipleOfThree=order% MODULO_3 ==0;
+        boolean isMultipleOfFive=order% MODULO_5 ==0;
+        boolean isMultipleOfSeven=order% MODULO_7 ==0;
+        if (isMultipleOfThree){
             countOff+=FIZZ;
         }
-        if (order% MODULO_5 ==0){
+        if (isMultipleOfFive){
             countOff+=BUZZ;
         }
-        if (order% MODULO_7 ==0){
+        if (isMultipleOfSeven){
             countOff+= WHIZZ;
         }
         return countOff.equals("")?String.valueOf(order):countOff;
