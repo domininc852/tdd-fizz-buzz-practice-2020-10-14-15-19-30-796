@@ -4,28 +4,20 @@ public class FizzBuzz {
     private final String FIZZ="Fizz";
     private final String BUZZ="Buzz";
     private final String WHIZZ="Whizz";
-    private final int FIZZ_NUMBER=3;
-    private final int BUZZ_NUMBER=5;
-    private final int WHIZZ_NUMBER=7;
+    private final int MODULO_3 =3;
+    private final int MODULO_5 =5;
+    private final int MODULO_7 =7;
     public String countOff(int order) {
-        if ((order%FIZZ_NUMBER==0)&&(order%BUZZ_NUMBER==0)){
-            return FIZZ+BUZZ;
+        String countOff="";
+        if (order% MODULO_3 ==0){
+            countOff+=FIZZ;
         }
-        else if ((order%FIZZ_NUMBER==0)&&(order%WHIZZ_NUMBER==0)){
-            return FIZZ+WHIZZ;
+        if (order% MODULO_5 ==0){
+            countOff+=BUZZ;
         }
-        else if ((order%BUZZ_NUMBER==0)&&(order%WHIZZ_NUMBER==0)){
-            return BUZZ+WHIZZ;
+        if (order% MODULO_7 ==0){
+            countOff+= WHIZZ;
         }
-        else if (order%FIZZ_NUMBER==0){
-            return FIZZ;
-        }
-        else if (order%BUZZ_NUMBER==0){
-            return BUZZ;
-        }
-        else if (order%WHIZZ_NUMBER==0){
-            return WHIZZ;
-        }
-        return String.valueOf(order);
+        return countOff.equals("")?String.valueOf(order):countOff;
     }
 }
