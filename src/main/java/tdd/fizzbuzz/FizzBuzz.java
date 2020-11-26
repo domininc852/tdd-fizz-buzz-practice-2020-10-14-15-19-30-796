@@ -7,6 +7,9 @@ public class FizzBuzz {
         if (order%FIZZ_NUMBER==0){
             return FIZZ;
         }
+        else if (order%5==0){
+            return "Buzz";
+        }
         return String.valueOf(order);
     }
 }
