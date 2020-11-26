@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
     @Test
-    public void should_return_string_order_number_when_count_off_given_order_number(){
+    public void should_return_string_order_number_when_count_off_given_normal_case(){
         //given
         int order=1;
         FizzBuzz fizzbuzz=new FizzBuzz();
@@ -64,6 +64,16 @@ public class FizzBuzzTest {
         String actualOrder=fizzbuzz.countOff(order);
         //then
         assertEquals("FizzWhizz",actualOrder);
+    }
+    @Test
+    public void should_return_BuzzWhizz_when_count_off_given_order_number_multiple_of_5_and_7(){
+        //given
+        int order=35;
+        FizzBuzz fizzbuzz=new FizzBuzz();
+        //when
+        String actualOrder=fizzbuzz.countOff(order);
+        //then
+        assertEquals("BuzzWhizz",actualOrder);
     }
 
 }
