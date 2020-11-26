@@ -12,6 +12,9 @@ public class FizzBuzz {
         boolean isMultipleOfThree=order% MODULO_3 ==0;
         boolean isMultipleOfFive=order% MODULO_5 ==0;
         boolean isMultipleOfSeven=order% MODULO_7 ==0;
+        if (String.valueOf(order).contains("3")){
+            return FIZZ;
+        }
         if (isMultipleOfThree){
             countOff+=FIZZ;
         }
