@@ -11,6 +11,9 @@ public class FizzBuzz {
         if ((order%FIZZ_NUMBER==0)&&(order%BUZZ_NUMBER==0)){
             return FIZZ+BUZZ;
         }
+        else if ((order%FIZZ_NUMBER==0)&&(order%WHIZZ_NUMBER==0)){
+            return FIZZ+WHIZZ;
+        }
         else if (order%FIZZ_NUMBER==0){
             return FIZZ;
         }
