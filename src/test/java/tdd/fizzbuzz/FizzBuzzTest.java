@@ -85,5 +85,16 @@ public class FizzBuzzTest {
         //then
         assertEquals("FizzBuzzWhizz",actualOrder);
     }
+    @Test
+    public void should_return_FizzB_when_count_off_given_order_number_contains_3(){
+        //given
+        int order=130;
+        FizzBuzz fizzbuzz=new FizzBuzz();
+        //when
+        String actualOrder=fizzbuzz.countOff(order);
+        //then
+        assertEquals("Fizz",actualOrder);
+    }
+
 
 }
