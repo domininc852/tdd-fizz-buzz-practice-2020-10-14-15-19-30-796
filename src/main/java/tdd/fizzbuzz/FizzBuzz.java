@@ -8,7 +8,10 @@ public class FizzBuzz {
     private final int BUZZ_NUMBER=5;
     private final int WHIZZ_NUMBER=7;
     public String countOff(int order) {
-        if (order%FIZZ_NUMBER==0){
+        if ((order%FIZZ_NUMBER==0)&&(order%BUZZ_NUMBER==0)){
+            return FIZZ+BUZZ;
+        }
+        else if (order%FIZZ_NUMBER==0){
             return FIZZ;
         }
         else if (order%BUZZ_NUMBER==0){
